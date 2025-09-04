@@ -21,19 +21,19 @@ jobs:
         uses: dart-lang/setup-dart@v1
         with:
           sdk: stable
-      
-      # Install Melos globally
+
+      - name: Drop workspace resolution for CI
+        run: sed -i '/^resolution:\s*workspace\s*$/d' pubspec.yaml
+
       - name: Get dependencies
         run: dart pub get
 
-      # Generate coverage for smf_flutter_cli
+      # Generate coverage for smf_contracts
       - name: Install coverage tool
         run: dart pub global activate coverage
 
-      - name: Run tests with coverage (smf_flutter_cli)
+      - name: Run tests with coverage (smf_contracts)
         run: |
-          cd packages/smf_flutter_cli
-          dart pub get
           dart test --coverage=coverage
           format_coverage \
             -i coverage \
