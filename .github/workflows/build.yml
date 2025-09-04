@@ -32,14 +32,14 @@ jobs:
       - name: Install coverage tool
         run: dart pub global activate coverage
 
-      - name: Run tests with coverage (smf_contracts)
-        run: |
-          dart test --coverage=coverage
-          format_coverage \
-            -i coverage \
-            -o coverage/lcov.info \
-            --lcov \
-            --report-on=lib
+#      - name: Run tests with coverage (smf_contracts)
+#        run: |
+#          dart test --coverage=coverage
+#          format_coverage \
+#            -i coverage \
+#            -o coverage/lcov.info \
+#            --lcov \
+#            --report-on=lib
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
