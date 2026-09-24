@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This repository has moved.** `smf_contracts` now lives in the [smf_flutter_cli monorepo](https://github.com/saymyframe/smf_flutter_cli/tree/main/packages/smf_contracts) with its full history. Please open issues and pull requests there. This repository is archived and read-only.
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=saymyframe_smf_contracts&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=saymyframe_smf_contracts)
 
 # smf_contracts
